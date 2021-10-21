@@ -1,0 +1,537 @@
+/* ---------- root variables ---------- */
+:root {
+    --green: rgb(255, 255, 255);
+    --light-green: rgb(172, 198, 201);
+    --light-grey: #f1f1f4;
+    --text-color-light: #f1f1f1;
+    --text-color-dark: #333;
+  }
+  
+  /* ---------- general styling ---------- */
+  html,
+  body {
+    color: var(--text-color-dark);
+    font-family: 'avenir next', Arial, sans-serif;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  /* ---------- tabbar styling ---------- */
+  nav {
+      
+    background-color: var(--green);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  
+  /* Style the links inside the navigation bar */
+  nav a {
+    
+    color: var(--text-color-dark);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  /* Change the color of links on hover */
+  nav a:hover {
+    background-color: var(--light-grey);
+    color: var(--text-color-dark);
+  }
+  
+  /* Add a color to the active/current link */
+  nav a.active {
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+  
+  /* ---------- topbar styling ---------- */
+  
+  
+  .topbar h2 {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  
+  /* ---------- page styling ---------- */
+  .page {
+    display: block;
+    /*min heigh is screen heigh minus height of tab and top bar */
+    min-height: calc(100vh - 110px);
+    background: var(--light-grey);
+    animation: fadeIn 0.4s;
+    /* padding equals height of tabbar and topbar */
+    padding: 55px 0;
+  }
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 375px){
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+.showcase{
+    background-color: none;
+    color: #fff;
+    margin-top: -30px;
+    height: 40vh;
+    position: relative;
+}
+
+.showcase:before {
+    content: '';
+    background: url("../img/mig.jpg") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 50%;
+}
+
+.showcase .showcase-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+
+
+
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 1300px;
+    gap: 30px 0px;
+    margin-top: 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Celle1 celle2"
+      "celle3 celle4"
+      "celle5 ";
+  }
+  
+  .Celle1 { grid-area: Celle1; 
+
+
+}
+  
+  .celle2 { grid-area: celle2; 
+   }
+  
+  .celle3 { grid-area: celle3; }
+  
+  .celle4 { grid-area: celle4; }
+  
+  .celle5 { grid-area: celle5; }
+
+  
+
+
+.container2 {
+position: relative;
+width: 100%;
+}
+
+.image00 {
+display: block;
+width: 300px;
+height: auto;
+opacity: 1;
+margin-left: 18px;
+
+}
+.image0 {
+   
+    margin-bottom: 30px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in;
+    background-blend-mode: soft-light;
+    
+    
+  }
+  
+  .container2:hover .overlay {
+    opacity: 1;
+  }
+
+
+  
+  .text2 {
+    color: black;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 7px;
+    padding-top: 20px;
+    margin-left: 190px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+
+
+
+
+
+.ikoner {
+    width: 30px;
+    margin:20px;
+    margin-top: 10px;
+   
+}
+
+
+
+.overskr{
+    background-color:  #d8cfcf;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+  }
+
+
+
+.ikoner_kom{
+    width: 150px;
+    margin-top: 0px;
+    padding: 10px;
+
+}
+
+.overskr_kom{
+font-family: marker felt;
+font-size: 20px;
+
+
+}
+.mere_txt{
+    margin-bottom: -30px;
+    font-size: 22px;
+}
+
+
+}
+
+@media (min-width: 700px){
+
+    .showcase:before {
+        content: '';
+        background: url("../img/mig.jpg") no-repeat center;
+        background-size: 120%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .showcase{
+        background-color: none;
+        color: #fff;
+        margin-top: -150px;
+        height: 110vh;
+        position: relative;
+    }
+
+    
+    
+}
+
+@media (min-width: 900px){
+
+
+
+/* ---------- tabbar styling ---------- */
+nav {
+    background-color: var(--green);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  
+  /* Style the links inside the navigation bar */
+  nav a {
+    display: inline-block;
+    color: var(--text-color-dark);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  /* Change the color of links on hover */
+  nav a:hover {
+    background-color: var(--light-grey);
+    color: var(--text-color-dark);
+  }
+  
+  /* Add a color to the active/current link */
+  nav a.active {
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+  
+  /* ---------- topbar styling ---------- */
+  
+  
+  .topbar h2 {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+
+
+
+
+
+
+    .showcase:before {
+        content: '';
+        background: url("../img/mig.jpg") no-repeat center;
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 70%;
+       
+    }
+
+    .showcase{
+        background-color: none;
+        color: #fff;
+        margin-top: 0px;
+        height: 100vh;
+        position: relative;
+       
+    }
+
+
+
+
+
+
+
+    .container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 1300px;
+        gap: 100px 0px;
+        margin-top: 50px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Celle1 celle2"
+          "celle3 celle4"
+          "celle5 celle6"
+
+          
+      }
+      
+      .Celle1 { grid-area: Celle1; 
+   
+
+}
+      
+      .celle2 { grid-area: celle2; 
+       }
+      
+      .celle3 { grid-area: celle3; }
+      
+      .celle4 { grid-area: celle4; }
+
+      .celle5 { grid-area: celle5; }
+
+      .celle6 { grid-area: celle6; }
+      
+   
+
+      
+
+
+
+
+.container2 {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image00 {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 30px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in;
+    background-blend-mode: soft-light;
+    
+    
+  }
+  
+  .container2:hover .overlay {
+    opacity: 1;
+  }
+
+
+  
+  .text2 {
+    color: black;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    opacity: 0.6;
+    border-radius: 7px;
+    padding-top: 80px;
+
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+
+
+
+.imgkomp {
+
+    width: 300px;
+   align-items: center;
+    margin: 30px;
+}
+
+.textkomp {
+    margin-top: -70px;
+    margin-left: 50px;
+}
+
+
+.ikoner {
+    width: 70px;
+    margin:20px;
+    margin-top: -20px;
+    margin-bottom: 60px;
+    
+   
+}
+
+
+.overskr1{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.ikoner_kom{
+    width: 350px;
+   margin-top: -50px;
+ padding: 50px; 
+ 
+ 
+}
+
+
+.overskr_kom{
+    font-family: marker felt;
+    font-size: 20px;
+    
+    
+    }
+
+    .mere_txt{
+        margin-bottom: 30px;
+        margin-top: -30px;
+        font-family: marker felt;
+        font-size: 20px;
+    }
+
+    .tyk_cider{
+
+      font-family: marker felt;
+     
+      font-size: 15px;
+      letter-spacing: 1px;
+     }
+
+* { color:rgb(12, 12, 12); text-decoration: none;}
+}
